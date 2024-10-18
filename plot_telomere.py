@@ -26,8 +26,8 @@ for record in records:
 occ_fwd = {}
 occ_rev = {}
 
-for rn in seq_h1:
-    st = str(seq_h1[rn]).upper()
+for rn in seq:
+    st = str(seq[rn]).upper()
     
     print(rn, len(st))
     pos_fwd = [m.start() for m in re.finditer(kmer_forward, st)]
@@ -57,7 +57,7 @@ for rn in occ_fwd:
 
 plt.rcParams["figure.figsize"] = (20, 5)
 for rn in values:
-    x = range(0, len(direction_rev[rn]), 100)
+    x = range(0, len(occ_fwd[rn]), bin_plot_multiplier)
     y = values[rn]
     plt.figure()
     plt.text(0.5, 0.8, rn, fontsize=30, transform=plt.gcf().transFigure)
