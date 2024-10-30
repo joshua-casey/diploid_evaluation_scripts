@@ -1,6 +1,6 @@
 Several diploid assembly evaluation scripts.
 
-Requirements: python with matplotlib, BioConda, and pysam
+Requirements: python with matplotlib, biopython, and pysam
 
 ### Plot Alignments
 
