@@ -21,7 +21,7 @@ for line in f:
     
 ratios = [0 for _ in range(10)]
 xs = range(0, 100, 10)
-for a, b in ratios:
+for a, b in occs:
     if (a + b) > 0:
         c = int(10 * (a / (a+b)))
         if c == 10:
