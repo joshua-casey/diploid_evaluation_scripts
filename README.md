@@ -26,3 +26,6 @@ Adjust file paths and K in lines 3-6
 Outputs ont_haploid_kmers.txt
 
 Use ```plot_haploid_kmers.py``` with ont_haploid_kmers.txt as input to plot.
+
+### QUAST and Merqury
+
