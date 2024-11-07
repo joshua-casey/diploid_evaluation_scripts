@@ -121,6 +121,7 @@ for rn in direction_rev:
     values[rn] = y
 
 plt.rcParams["figure.figsize"] = (20, 5)
+contig_id = 0
 for rn in values:
     x = range(0, len(direction_rev[rn]), bin_plot_multiplier)
     y = values[rn]
@@ -128,7 +129,9 @@ for rn in values:
     plt.text(0.5, 0.8, rn, fontsize=30, transform=plt.gcf().transFigure)
     plt.bar(x, y, width=bin_plot_multiplier)
     plt.ylim(45, 100)
-    plt.savefig("direction/%s.png" % rn, bbox_inches="tight")
+    plt.savefig("direction/contig_%d.png" % contig_id, bbox_inches="tight")
+    contig_id += 1    
+    # plt.savefig("direction/%s.png" % rn, bbox_inches="tight")
     
 # Reads Coverage
 
@@ -150,7 +153,8 @@ for rn in direction_rev:
         x.append(j)
         j += 1
     values[rn] = y
-    
+
+contig_id = 0
 for rn in values:
     x = range(0, len(direction_rev[rn]), 10)
     y = values[rn]
@@ -158,7 +162,8 @@ for rn in values:
     plt.text(0.5, 0.8, rn, fontsize=30, transform=plt.gcf().transFigure)
     plt.bar(x, y, width=bin_plot_multiplier)
     plt.ylim(45, 100)
-    plt.savefig("coverage/%s.png" % rn, bbox_inches="tight")
+    plt.savefig("coverage/contig_%d.png" % contig_id, bbox_inches="tight")
+    contig_id += 1    
     
 # Reads Clipping
 
@@ -178,7 +183,8 @@ for rn in direction_rev:
         j += 1
     
     values3[rn] = y
-    
+
+contig_id = 0
 for rn in values3:
     x = range(0, len(direction_rev[rn]), bin_plot_multiplier)
     y = values[rn]
@@ -186,7 +192,8 @@ for rn in values3:
     plt.text(0.5, 0.8, rn, fontsize=30, transform=plt.gcf().transFigure)
     plt.bar(x, y, width=bin_plot_multiplier)
     plt.ylim(45, 100)
-    plt.savefig("clips/%s.png" % rn, bbox_inches="tight")
+    plt.savefig("clips/contig_%d.png" % contig_id, bbox_inches="tight")
+    contig_id += 1   
     
 get_covs = []
 get_clips = []
